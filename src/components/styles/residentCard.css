@@ -1,0 +1,49 @@
+.resident {
+    background: var(--bg-card-color);
+    border-radius: 0.5rem;
+    max-width: 28rem;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.resident__figure img{
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.resident__name {
+    text-align: center;
+    border-block-end: 0.1rem solid rgba(255, 255, 255, 0.2);
+    padding-block: 1rem;
+}
+
+.resident__info {
+    padding-block-end: 2rem;
+    padding-inline: 2rem;
+}
+
+.resident__list {
+    margin-block-start: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resident__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.resident__item-label {
+    color: var(--gray-color);
+}
+
+.resident__item-value {
+    font-weight: 500;
+}
+
+@media (min-width: 768px){
+    .resident {
+        min-width: 28rem;
+    }
+}

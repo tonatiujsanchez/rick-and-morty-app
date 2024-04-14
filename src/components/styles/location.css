@@ -1,0 +1,39 @@
+.location {
+    background-color: var(--bg-card-color);
+    padding: 2rem 3rem;
+    border-radius: 0.8rem;
+    margin-inline: auto;
+    max-width: 60rem;
+    box-shadow: 0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.6);
+    margin-block-end: 6rem;
+}
+
+.location__name {
+    color: var(--lime-color);
+    text-align: center;
+    margin-block-end: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.location__list {
+    display: grid;
+    gap: 2rem;
+}
+
+.location__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.location__item-value {
+    color: var(--gray-color);
+}
+
+@media (min-width: 600px){
+    .location__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

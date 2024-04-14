@@ -1,0 +1,42 @@
+.residents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-block-end: 10rem;
+}
+
+.no-population {
+    max-width: 80%;
+    margin-inline: auto;
+    margin-block-end: 5rem;
+    position: relative;
+}
+
+.no-population__figcaption {
+    position: absolute;
+    inset-block-start: 42%;
+    inset-inline-start: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 0.2rem 0.4rem rgb(0, 0, 0, 0.7);
+}
+
+@media (min-width: 768px){
+    .residents {
+        padding-inline: 2rem;
+    }
+
+    .no-population {
+        max-width: 35rem;
+    }
+    
+    .no-population__figcaption {
+        font-size: 2.2rem;
+    }
+
+}

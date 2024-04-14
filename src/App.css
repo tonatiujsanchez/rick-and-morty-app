@@ -1,0 +1,130 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+
+}
+
+:root {
+    --bg-color: #05292E;
+    --bg-card-color: #062226;
+    --lime-color: #71A821;
+    --white-color: #FFFFFF;
+    --gray-color: #B0AFAF;
+    --gray-light-color: #938686;
+    --red-color: #DB0708;
+    --green-color: #04A105;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-size: 1.6rem;
+    color: var(--white-color);
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.main {
+    padding-inline: 1rem;
+    max-width: 140rem;
+    margin-inline: auto;
+}
+
+.error-msg {
+    text-align: center;
+    color: rgb(255, 67, 67);
+    margin-block-start: 10rem;
+}
+
+.error-msg svg {
+    width: 3rem;
+}
+
+
+/* ===== ===== ===== LOCATION ===== ===== ===== */
+.location__skeleton {
+    width: 100%;
+    max-width: 60rem;
+    height: 16.8rem;
+    margin-inline: auto;
+    margin-block-end: 6rem;
+    border-radius: 0.8rem;
+    animation: skeleton-loading 0.5s linear infinite alternate;
+}
+
+.resident__skeleton {
+    width: 100%;
+    max-width: 28rem;
+    height: 53rem;
+    border-radius: 0.8rem;
+    animation: skeleton-loading 0.5s linear infinite alternate;
+}
+
+
+
+/* Custom scroll */
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+  
+body::-webkit-scrollbar:vertical {
+    width:8px;
+  }
+  
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+    display: none;
+} 
+  
+body::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(101, 149, 155);
+    border-radius: 20px;
+    border: 2px solid #2f555a;
+}
+  
+body::-webkit-scrollbar-track {
+    border-radius: 8px;  
+}
+  
+
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(201, 20%, 72%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+
+/* Para pantallas muy grandes */
+@media screen and (min-width: 2000px) {
+    .form__content {
+        zoom: 1.1;
+    }
+}
+
+
+

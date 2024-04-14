@@ -1,0 +1,36 @@
+.hero {
+    min-height: 20rem;
+    background-image: url('/img/ram-cover.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: grid;
+    place-content: center;
+}
+
+.hero__title {
+    max-width: 20rem;
+}
+
+@media (min-width: 639px){
+    .hero {
+        min-height: 28rem;
+    }
+
+    .hero__title {
+        max-width: 30rem;
+    }
+    
+}
+
+@media (min-width: 768px){
+    .hero {
+        min-height: 38rem;
+    }
+
+    .hero__title {
+        max-width: 40rem;
+    }
+    
+}
