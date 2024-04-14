@@ -1,9 +1,13 @@
 .residents {
+    margin-block-end: 10rem;
+}
+
+.residents__content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-block-end: 10rem;
+    margin-block-end: 4rem;
 }
 
 .no-population {

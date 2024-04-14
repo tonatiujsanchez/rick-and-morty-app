@@ -11,6 +11,38 @@
     aspect-ratio: 1;
 }
 
+.resident__figure {
+    position: relative;
+}
+
+.resident__figure--figcaption {
+    position: absolute;
+    inset-block-start: 2rem;
+    background-color: var(--bg-card-color);
+    padding-inline: 1rem;
+    min-width: 9rem;
+    border-end-end-radius: 0.6rem;
+    border-start-end-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.resident__status-circle {
+    width: 1.2rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: var(--gray-color);
+}
+
+.resident__status-circle--alive {
+    background-color: var(--green-color);
+}
+
+.resident__status-circle--dead {
+    background-color: var(--red-color);
+}
+
 .resident__name {
     text-align: center;
     border-block-end: 0.1rem solid rgba(255, 255, 255, 0.2);

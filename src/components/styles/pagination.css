@@ -1,0 +1,33 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.pagination a {
+    display: block;
+    width: 3.8rem;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-block-end: 0.2rem solid transparent;
+    display: grid;
+    place-content: center;
+}
+
+.pagination a:hover {
+    border-block-end-color: var(--lime-color);
+    background: var(--bg-light-color);
+}
+
+.pagination a.pagination__button--current {
+    background: var(--lime-color);
+    color: var(--white-color)
+}
+
+.pagination a.pagination__button--current:hover {
+    color: var(--white-color);
+    transform: scale(1);
+}

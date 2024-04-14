@@ -20,6 +20,10 @@ export const ResidentCard = ({ residentUrl }) => {
             <article className="resident">
                 <figure className="resident__figure">
                     <img src={ resident.image } alt={ resident.name } />
+                    <figcaption className="resident__figure--figcaption">
+                        <div className={`resident__status-circle ${ resident.status === 'Alive' && 'resident__status-circle--alive' } ${resident.status === 'Dead' && 'resident__status-circle--dead'}`}></div>
+                        <span className="resident__status">{ resident.status }</span>
+                    </figcaption>
                 </figure>
                 <div className="resident__info">
                     <h3 className="resident__name">{ resident.name }</h3>

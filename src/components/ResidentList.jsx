@@ -1,9 +1,18 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types'
+import { ResidentCard, Pagination } from './'
+import { getResidentsPerPage } from '../services'
 import './styles/residentList.css'
-import { ResidentCard } from './ResidentCard'
 
 export const ResidentList = ({ residents }) => {
 
+    const [page, setPage] = useState(1)
+
+    const { totalPages, data } = getResidentsPerPage( residents, page )
+
+    const handlePage = (page) => {
+        setPage(page)
+    }
 
     if( residents.length === 0 ){
         return(
@@ -18,13 +27,24 @@ export const ResidentList = ({ residents }) => {
 
     return (
         <section className="residents">
+            <div className="residents__content">
+                {
+                    data.map( residentUrl => (
+                        <ResidentCard
+                            key={ residentUrl }
+                            residentUrl={ residentUrl }
+                        />
+                    ))
+                }
+            </div>
             {
-                residents.map( residentUrl => (
-                    <ResidentCard
-                        key={ residentUrl }
-                        residentUrl={ residentUrl }
+                totalPages > 1 && (
+                    <Pagination
+                        totalPages={ totalPages }
+                        currentPage={ page }
+                        handlePage={ handlePage }
                     />
-                ))
+                )
             }
         </section>
     )
