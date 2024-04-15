@@ -22,7 +22,7 @@ export const SearchForm = ({ setIndexLocation }) => {
                 <input
                     type="text"
                     value={ searchTerm }
-                    placeholder="Buscar por nombre"
+                    placeholder="Buscar por nombre de la ubicación"
                     onChange={({ target }) => setSearchTerm(target.value)}
                     className={`search-form__input ${ ( locations.length > 0 || noResults ) && 'search-form__input--open' }`}
                 />
