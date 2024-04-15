@@ -1,30 +1,28 @@
 import { useEffect, useState } from 'react'
-import { Form, Hero, LocationCard, ResidentList } from './components'
 import { useFetch } from './hooks'
-
+import { Hero, LocationCard, ResidentList, SearchForm } from './components'
 import './App.css'
+
 
 const indexRandom = Math.floor(Math.random() * 126) - 1
 
 function App() {
 
-    const [indexLocation, setIndexLocation] = useState( indexRandom )
-    const [location, getLocation, isLoading, hasError] = useFetch()
+    const [ indexLocation, setIndexLocation ] = useState( indexRandom )
+    const [ location, getLocation, isLoading, hasError ] = useFetch()
 
     useEffect(() => {
         const url = `https://rickandmortyapi.com/api/location/${indexLocation}`
         getLocation(url)
-    }, [indexLocation])
+    }, [ indexLocation ])
 
     return (
         <>
             <Hero />
             <main className="main">
-                <Form
-                    indexLocation={ indexLocation }
+                <SearchForm
                     setIndexLocation={ setIndexLocation }
                 />
-
                 {
                     hasError
                     ?(
@@ -63,7 +61,6 @@ function App() {
                         </>
                     )
                 }
-
             </main>
         </>
     )

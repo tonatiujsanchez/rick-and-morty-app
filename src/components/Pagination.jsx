@@ -4,7 +4,6 @@ import { ArrowLeftIcon, ArrowRightIcon } from './Icons'
 import './styles/pagination.css'
 
 export const Pagination = ({ totalPages, currentPage, handlePage }) => {
-    
     return (
         <div className="pagination">
             <ReactPaginate
@@ -12,7 +11,7 @@ export const Pagination = ({ totalPages, currentPage, handlePage }) => {
                 breakLabel="..."
                 nextLabel={ <ArrowRightIcon /> }
                 onPageChange={ ( event )=> handlePage( event.selected + 1 ) }
-                pageRangeDisplayed={1}
+                pageRangeDisplayed={ 1 }
                 pageCount={ totalPages }
                 previousLabel={ <ArrowLeftIcon /> }
                 activeLinkClassName={"pagination__button--current"}
